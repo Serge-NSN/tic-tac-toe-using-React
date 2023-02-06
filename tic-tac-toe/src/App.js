@@ -1,8 +1,10 @@
 import './App.css';
+import { useState } from 'react';
 
-function Square({ value }){
+function Square(){
+  const [value, setValue] = useState(null);
   function handleClick(){
-    console.log('clicked!');
+    setValue('O');
   }
   return (
     <button 
@@ -19,8 +21,8 @@ function App() {
       <h1 style={{color:"brown"}}>Tic-Tac-Toe Game using React</h1>
       <br />
       <div className="board-row">
-        <Square value="X"/>
-        <Square value="O"/>
+        <Square />
+        <Square />
         <Square />
 
       </div>
